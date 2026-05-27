@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessible Photo Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="addTabIndex()">
+  <a class="skip-link" href="#main">Skip to Main Content</a>
+
+  <header>
+    <h1>My Accessible Photo Gallery</h1>
+    <p>Hover over or focus on an image to preview it.</p>
+  </header>
+
+  <main id="main">
+    <section class="preview-section" aria-label="Image preview area">
+      <div id="image" role="img" aria-label="Gallery preview area">
+        Hover over an image below to display here.
+      </div>
+    </section>
+
+    <section class="gallery" aria-label="Photo gallery">
+      <figure>
+        <img src="images/mountain.svg" alt="A colorful mountain landscape at sunrise" onmouseover="upDate(this)" onmouseleave="unDo()" onfocus="upDate(this)" onblur="unDo()">
+        <figcaption>Mountain</figcaption>
+      </figure>
+      <figure>
+        <img src="images/beach.svg" alt="A calm beach with sun and blue waves" onmouseover="upDate(this)" onmouseleave="unDo()" onfocus="upDate(this)" onblur="unDo()">
+        <figcaption>Beach</figcaption>
+      </figure>
+      <figure>
+        <img src="images/forest.svg" alt="A green forest with tall trees" onmouseover="upDate(this)" onmouseleave="unDo()" onfocus="upDate(this)" onblur="unDo()">
+        <figcaption>Forest</figcaption>
+      </figure>
+      <figure>
+        <img src="images/city.svg" alt="A modern city skyline at night" onmouseover="upDate(this)" onmouseleave="unDo()" onfocus="upDate(this)" onblur="unDo()">
+        <figcaption>City</figcaption>
+      </figure>
+      <figure>
+        <img src="images/flower.svg" alt="A bright red flower with green leaves" onmouseover="upDate(this)" onmouseleave="unDo()" onfocus="upDate(this)" onblur="unDo()">
+        <figcaption>Flower</figcaption>
+      </figure>
+      <figure>
+        <img src="images/space.svg" alt="A purple night sky with stars and planets" onmouseover="upDate(this)" onmouseleave="unDo()" onfocus="upDate(this)" onblur="unDo()">
+        <figcaption>Space</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer>
+    <p>Created for the JavaScript interactive photo gallery assignment.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
